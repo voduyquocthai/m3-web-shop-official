@@ -50,9 +50,9 @@ service/impl/UserServiceImpl.java
  service.impl.UserServiceImpl
 model/Product.java
  model.Product
-controller/AdminController.java
- controller.AdminController
-service/CategoryService.java
- service.CategoryService
 dao/impl/CartItemDaoImpl.java
  dao.impl.CartItemDaoImpl
+service/CategoryService.java
+ service.CategoryService
+controller/AdminController.java
+ controller.AdminController

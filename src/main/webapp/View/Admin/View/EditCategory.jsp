@@ -115,12 +115,12 @@
         </div>
     </div>
     <div class="content">
-        <form style="width: 80%; margin-top: 50px;margin-left: 150px">
+        <form method="post" action="/admin?ac=edit_cate&id=${category.getId()}" style="width: 80%; margin-top: 50px;margin-left: 150px">
             <div class="row"><h2> Edit Category </h2></div>
             <div style="margin-top: 20px" class="row">
                 <div class="col-md-5">
                 <label for="inputAddress">Name Category</label>
-                <input type="text" class="form-control" id="inputAddress" value="${requestScope['category'].getName()}" >
+                <input name="name" type="text" class="form-control" id="inputAddress" value="${requestScope['category'].getName()}" >
             </div>
             </div>
                 <div style="margin-top: 20px" class="row">

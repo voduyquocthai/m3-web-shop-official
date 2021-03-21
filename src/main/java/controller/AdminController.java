@@ -284,7 +284,7 @@ public class AdminController extends HttpServlet {
         category.setId(Integer.parseInt(request.getParameter("id")));
         category.setName(request.getParameter("name"));
         categoryService.edit(category);
-        response.sendRedirect("");
+        response.sendRedirect("admin?ac=list_cate");
     }
 
     private void addCategory(HttpServletRequest request, HttpServletResponse response) throws IOException {
