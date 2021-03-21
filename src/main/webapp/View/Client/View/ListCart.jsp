@@ -51,10 +51,25 @@
                    aria-describedby="search-addon" />
         </div>
         </div>
-        <div class="col-md-1"></div>
-        <div style="margin-top: 46px " class="col-md-3">
-            <p style="color: red">Welcome ${user.getUsername()} !</p>
-            <a style="" href="/View/Client/View/SignIn.jsp">Register/Log in</a>
+        <div style="margin-top: 46px " class="col-md-4">
+            <c:choose>
+                <c:when test="${sessionScope.user == null}">
+                    <div class="">
+                        <ul class="list-inline right-topbar pull-right">
+                            <li><a href="${pageContext.request.contextPath }/user?ac=login">Login & Register</a></li>
+                        </ul>
+                    </div>
+                </c:when>
+                <c:otherwise>
+                    <div class="">
+                        <ul class="list-inline right-topbar pull-right">
+
+                            <li><p style="color: red; font-size: 20px">Welcome ${user.getUsername()} !</p></li>
+                            <li><a href="/user?ac=my_account&username=${user.getUsername()}">My Account</a> | <a href="${pageContext.request.contextPath }/user?ac=logout">Logout</a></li>
+                        </ul>
+                    </div>
+                </c:otherwise>
+            </c:choose>
         </div>
     </div>
 
