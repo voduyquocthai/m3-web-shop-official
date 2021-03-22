@@ -15,7 +15,7 @@ public interface ProductService {
 
     List<Product> getAll();
 
-    List<Product> search(String username);
+    List<Product> search(String name);
 
     List<Product> searchByCategory(int cate_id);
 

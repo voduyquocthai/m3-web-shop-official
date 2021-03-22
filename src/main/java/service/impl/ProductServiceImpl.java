@@ -43,8 +43,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> search(String username) {
-        return productDao.search(username);
+    public List<Product> search(String name) {
+        return productDao.search(name);
     }
 
     @Override
